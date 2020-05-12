@@ -1,0 +1,12 @@
+{
+  "presubmit": [
+    {
+      "name": "cfg-if_tests_cfg_if",
+      "host": true
+    },
+    {
+      "name": "cfg-if_tests_xcrate",
+      "host": true
+    }
+  ]
+}
