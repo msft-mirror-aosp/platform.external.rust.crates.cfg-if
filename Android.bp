@@ -16,13 +16,14 @@ rust_test_host {
     test_suites: ["general-tests"],
     auto_gen_config: true,
     edition: "2018",
-    rlibs: [
+    rustlibs: [
         "libcfg_if",
     ],
 }
 
-rust_library_host_rlib {
+rust_library {
     name: "libcfg_if",
+    host_supported: true,
     crate_name: "cfg_if",
     srcs: ["src/lib.rs"],
     edition: "2018",
