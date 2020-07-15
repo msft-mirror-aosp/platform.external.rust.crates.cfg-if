@@ -1,12 +1,18 @@
 {
   "presubmit": [
     {
-      "name": "cfg-if_tests_cfg_if",
+      "name": "cfg-if_host_test_src_lib",
       "host": true
     },
     {
-      "name": "cfg-if_tests_xcrate",
+      "name": "cfg-if_host_test_tests_xcrate",
       "host": true
+    },
+    {
+      "name": "cfg-if_device_test_src_lib"
+    },
+    {
+      "name": "cfg-if_device_test_tests_xcrate"
     }
   ]
 }
