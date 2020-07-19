@@ -3,6 +3,7 @@
 rust_defaults {
     name: "cfg-if_defaults",
     crate_name: "cfg_if",
+    srcs: ["src/lib.rs"],
     test_suites: ["general-tests"],
     auto_gen_config: true,
     edition: "2018",
@@ -11,18 +12,17 @@ rust_defaults {
 rust_test_host {
     name: "cfg-if_host_test_src_lib",
     defaults: ["cfg-if_defaults"],
-    srcs: ["src/lib.rs"],
 }
 
 rust_test {
     name: "cfg-if_device_test_src_lib",
     defaults: ["cfg-if_defaults"],
-    srcs: ["src/lib.rs"],
 }
 
 rust_defaults {
     name: "cfg-if_defaults_xcrate",
     crate_name: "xcrate",
+    srcs: ["tests/xcrate.rs"],
     test_suites: ["general-tests"],
     auto_gen_config: true,
     edition: "2018",
@@ -34,13 +34,11 @@ rust_defaults {
 rust_test_host {
     name: "cfg-if_host_test_tests_xcrate",
     defaults: ["cfg-if_defaults_xcrate"],
-    srcs: ["tests/xcrate.rs"],
 }
 
 rust_test {
     name: "cfg-if_device_test_tests_xcrate",
     defaults: ["cfg-if_defaults_xcrate"],
-    srcs: ["tests/xcrate.rs"],
 }
 
 rust_library {
