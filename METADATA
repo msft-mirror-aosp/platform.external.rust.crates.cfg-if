@@ -7,13 +7,13 @@ third_party {
   }
   url {
     type: ARCHIVE
-    value: "https://static.crates.io/crates/cfg-if/cfg-if-0.1.10.crate"
+    value: "https://static.crates.io/crates/cfg-if/cfg-if-1.0.0.crate"
   }
-  version: "0.1.10"
+  version: "1.0.0"
   license_type: NOTICE
   last_upgrade_date {
     year: 2020
-    month: 3
-    day: 31
+    month: 10
+    day: 26
   }
 }
