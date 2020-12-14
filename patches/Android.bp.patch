@@ -1,0 +1,12 @@
+--- Android.bp	2020-12-14 21:46:29.182898941 +0900
++++ Android.bp.new	2020-12-14 21:20:17.887466778 +0900
+@@ -47,4 +47,9 @@ rust_library {
+     crate_name: "cfg_if",
+     srcs: ["src/lib.rs"],
+     edition: "2018",
++    apex_available: [
++        "//apex_available:platform",
++        "com.android.resolv",
++    ],
++    min_sdk_version: "29",
+ }
