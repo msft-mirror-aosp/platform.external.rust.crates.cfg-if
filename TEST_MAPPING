@@ -44,6 +44,15 @@
       "name": "crossbeam-epoch_device_test_tests_loom"
     },
     {
+      "name": "crossbeam-queue_device_test_src_lib"
+    },
+    {
+      "name": "crossbeam-queue_device_test_tests_array_queue"
+    },
+    {
+      "name": "crossbeam-queue_device_test_tests_seg_queue"
+    },
+    {
       "name": "crossbeam-utils_device_test_src_lib"
     },
     {
@@ -161,6 +170,9 @@
       "name": "keystore2_test"
     },
     {
+      "name": "keystore2_test_utils_test"
+    },
+    {
       "name": "legacykeystore_test"
     },
     {
@@ -210,9 +222,6 @@
     },
     {
       "name": "serde-xml-rs_device_test_src_lib"
-    },
-    {
-      "name": "serde-xml-rs_device_test_tests_round_trip"
     },
     {
       "name": "tokio-test_device_test_src_lib"
