@@ -38,9 +38,11 @@ license {
 }
 
 rust_defaults {
-    name: "cfg-if_defaults",
+    name: "cfg-if_test_defaults",
     crate_name: "cfg_if",
     srcs: ["src/lib.rs"],
+    cargo_env_compat: true,
+    cargo_pkg_version: "1.0.0",
     test_suites: ["general-tests"],
     auto_gen_config: true,
     edition: "2018",
@@ -48,7 +50,7 @@ rust_defaults {
 
 rust_test_host {
     name: "cfg-if_host_test_src_lib",
-    defaults: ["cfg-if_defaults"],
+    defaults: ["cfg-if_test_defaults"],
     test_options: {
         unit_test: true,
     },
@@ -56,13 +58,15 @@ rust_test_host {
 
 rust_test {
     name: "cfg-if_device_test_src_lib",
-    defaults: ["cfg-if_defaults"],
+    defaults: ["cfg-if_test_defaults"],
 }
 
 rust_defaults {
-    name: "cfg-if_defaults_xcrate",
+    name: "cfg-if_test_defaults_xcrate",
     crate_name: "xcrate",
     srcs: ["tests/xcrate.rs"],
+    cargo_env_compat: true,
+    cargo_pkg_version: "1.0.0",
     test_suites: ["general-tests"],
     auto_gen_config: true,
     edition: "2018",
@@ -73,7 +77,7 @@ rust_defaults {
 
 rust_test_host {
     name: "cfg-if_host_test_tests_xcrate",
-    defaults: ["cfg-if_defaults_xcrate"],
+    defaults: ["cfg-if_test_defaults_xcrate"],
     test_options: {
         unit_test: true,
     },
@@ -81,19 +85,23 @@ rust_test_host {
 
 rust_test {
     name: "cfg-if_device_test_tests_xcrate",
-    defaults: ["cfg-if_defaults_xcrate"],
+    defaults: ["cfg-if_test_defaults_xcrate"],
 }
 
 rust_library {
     name: "libcfg_if",
     host_supported: true,
+    vendor_available: true,
     crate_name: "cfg_if",
+    cargo_env_compat: true,
+    cargo_pkg_version: "1.0.0",
     srcs: ["src/lib.rs"],
     edition: "2018",
     apex_available: [
         "//apex_available:platform",
         "com.android.compos",
         "com.android.resolv",
+        "com.android.uwb",
         "com.android.virt",
     ],
     min_sdk_version: "29",
