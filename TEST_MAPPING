@@ -32,9 +32,6 @@
       "path": "external/rust/crates/env_logger"
     },
     {
-      "path": "external/rust/crates/flate2"
-    },
-    {
       "path": "external/rust/crates/futures-util"
     },
     {
